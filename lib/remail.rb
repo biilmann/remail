@@ -53,7 +53,7 @@ module Remail
       %w{to from cc bcc reply_to}.each {|attr|
         value = mail.header[attr]
         next unless value
-        remail.send("#{attr}=", value.join(", "))
+        remail.send("#{attr}=", value)
       }      
       
       remail.subject  = mail.subject
